@@ -8,6 +8,14 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# load profile from /etc/
+if [ -f "/etc/profile" ]; then
+    . "/etc/profile"
+fi
+
+# load personal details
+. $HOME/private.sh
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
