@@ -25,3 +25,8 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# set PATH so it includes a user's shared binaries if they exist
+if [ -d "$HOME/.local/share" ] ; then
+    PATH="$HOME/.local/share:$PATH"
+fi
