@@ -167,3 +167,5 @@ if [ -d "$CONDA_PATH" ] && [ -f "$CONDA_PATH/bin/conda" ]; then
 else
     echo "Conda files not found. Skipping conda initialization."
 fi
+
+alias mamba='micromamba'
