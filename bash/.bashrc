@@ -118,13 +118,17 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
 #>>> cargo initialize >>>
 export PATH="$HOME/.cargo/bin:$PATH"
 
 #>>>QOL Improvements >>>
+#setup eza
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+#setup starship
 eval "$(starship init bash)"
+#setup neovim
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+alias vim="nvim"
 
 # Mamba initialization
 if [ -f "/home/catbase/.local/bin/micromamba" ] && [ -d "/home/catbase/micromamba" ]; then
