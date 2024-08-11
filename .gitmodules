@@ -1,6 +1,6 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
-	url = https://github.com/NvChad/starter
+	url = https://github.com/Cauch-BS/starter
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
@@ -15,4 +15,4 @@
 	url = https://github.com/tmux-plugins/tmux-yank
 [submodule "tmux/.config/tmux/plugins/tpm"]
 	path = tmux/.config/tmux/plugins/tpm
-	url = https://git::@github.com/tmux-plugins/tpm
+	url = https://git::@github.com/tmux-plugins/tpm	
