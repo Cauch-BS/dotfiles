@@ -1,10 +1,12 @@
 #! /bin/bash
                                                                              
+#contributed by @Lazy Ren at StackOverflow
+#See https://stackoverflow.com/questions/62201080/is-it-possible-to-use-the-code-command-in-sshed-terminal-to-open-vs-code-on-l
+
 max_retry=10                                                                 
                                                                              
-for i in $(seq 1 $max_retry)                                                 
-do
-    recent_folder=$(ls -d ~/.vscode-server/cli/servers/*/ -t | head -n1 | tail -1)                                                                       
+for i in $(seq 1 $max_retry); do
+    recent_folder=$(ls -d ~/.vscode-server/cli/servers/*/ -t | head -n1 | tail -1)                                                             
     script=$(echo $recent_folder/server/bin/remote-cli/code)   
     if [[ -z ${script} ]]                                                    
     then                                                                     
