@@ -13,4 +13,10 @@ cd dotfiles # or else the name of this repository
 stow starship
 ```
 
-On a Windows machine, manual copy and paste is recommended. 
+There is some awkwardness when you attempt to overwrite an existing config. In such a case, I recommend doing the following. 
+
+1. Run stow with the --adopt option.
+2. Compare the "adopted" files with the ones that were originally in my repo using git diff.
+3. Discard all changes introduced by the "adopted" files with git reset --hard, reverting the entire directory the last committed state.
+
+Meanwhile, on windows, manual copy and paste is recommended. 
