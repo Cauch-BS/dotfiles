@@ -1,6 +1,6 @@
 # Cauch-BS's dotfiles
 
-*Inspired by* [HeyItsGilbert](https://github.com/HeyItsGilbert/dotfiles). 
+*Inspired by [HeyItsGilbert](https://github.com/HeyItsGilbert/dotfiles).*
 
 This is a repository for storing dotfiles for replicable configuration across devices. 
 
