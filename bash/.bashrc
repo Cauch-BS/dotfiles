@@ -133,21 +133,24 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 alias vim="nvim"
 # Define the `link` function
 link() {
-    if [ "$#" -lt 1 ]; then
-        echo "Usage: link <source> [target]"
+    if [ $# -eq 0 ] || [ $# -gt 2 ]; then
+        echo "Usage: link <source_file> [target_directory]"
         return 1
     fi
-    
-    local src="$1"
-    local target="${2:-./$(basename "$src")}"
-    
-    if [ "$#" -eq 1 ]; then
-        echo "No target specified, defaulting to: $target"
+
+    source_file="$1"
+    if [ $# -eq 1 ]; then
+        target_dir="."
+        echo "Target directory not specified. Using current directory."
+    else
+        target_dir="$2"
     fi
 
-    ln -s "$src" "$target"
+    target_file="${target_dir}/$(basename "$source_file")"
+    
+    ln -s "$source_file" "$target_file"
+    echo "Created symbolic link: $target_file -> $source_file"
 }
-
 
 
 # Mamba initialization
