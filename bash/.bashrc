@@ -152,6 +152,7 @@ link() {
     echo "Created symbolic link: $target_file -> $source_file"
 }
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Mamba initialization
 if [ -f "/home/catbase/.local/bin/micromamba" ] && [ -d "/home/catbase/micromamba" ]; then
@@ -192,3 +193,4 @@ else
 fi
 
 alias mamba='micromamba'
+
