@@ -1,3 +1,9 @@
 [user]
 	Name = Chaebeom Sheen
 	Email = cauchybs@snu.ac.kr
+[credential "https://github.com"]
+	helper = 
+	helper = !/blaze/catbase/conda/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/blaze/catbase/conda/bin/gh auth git-credential
