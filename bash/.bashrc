@@ -151,8 +151,11 @@ link() {
     ln -s "$source_file" "$target_file"
     echo "Created symbolic link: $target_file -> $source_file"
 }
-
+#setup fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#setup zoxide
+eval "$(zoxide init bash)"
+alias cd='z'
 
 # Mamba initialization
 if [ -f "/home/catbase/.local/bin/micromamba" ] && [ -d "/home/catbase/micromamba" ]; then
