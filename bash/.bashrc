@@ -131,6 +131,24 @@ eval "$(starship init bash)"
 #setup neovim
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 alias vim="nvim"
+# Define the `link` function
+link() {
+    if [ "$#" -lt 1 ]; then
+        echo "Usage: link <source> [target]"
+        return 1
+    fi
+    
+    local src="$1"
+    local target="${2:-./$(basename "$src")}"
+    
+    if [ "$#" -eq 1 ]; then
+        echo "No target specified, defaulting to: $target"
+    fi
+
+    ln -s "$src" "$target"
+}
+
+
 
 # Mamba initialization
 if [ -f "/home/catbase/.local/bin/micromamba" ] && [ -d "/home/catbase/micromamba" ]; then
