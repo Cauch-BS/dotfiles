@@ -42,6 +42,7 @@
   mergeoptions = --no-edit
   pager = less -FiR # -F is necessary but has problems with tmux and regular shells
 	excludesfile = /home/braulio/.gitignore
+	editor = nvim
 
 [mergetool "vimdiff3"]
   cmd = vim -u ~/.vimrc -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
