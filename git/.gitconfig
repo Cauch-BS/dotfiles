@@ -10,6 +10,10 @@
 	helper = 
   helper = !/blaze/catbase/conda/bin/gh auth git-credential
 
+#### contrib ####
+#### @brauliobo ####
+#source: https://github.com/brauliobo/gitconfig/blob/master/configs/.gitconfig
+
 [apply]
   ignorewhitespace = change
   whitespace = nowarn
