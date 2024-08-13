@@ -90,20 +90,12 @@ delay() {
 
 # Install script
 # Downloads and installs a binary from the given url.
-
-echo "Installing ${BLUE}NixOS 󱄅${NO_COLOR} from nix portable..."
+rm $HOME/.local/bin/nix*
+echo "Installing ${BLUE}NixOS ❄ ${NO_COLOR} from nix portable..."
 curl -L https://github.com/DavHau/nix-portable/releases/latest/download/nix-portable-$(uname -m) > $HOME/.local/bin/nix-portable
 chmod +x $HOME/.local/bin/nix-portable 
 ln -s $HOME/.local/bin/nix-portable $HOME/.local/bin/nix-shell
 ln -s $HOME/.local/bin/nix-portable $HOME/.local/bin/nix 
-set -euo pipefail
-if command -v nix &> /dev/null
-then
-    echo "nix 󱄅 has been successfully installed. Great! Version: $(nix --version)"
-else
-    echo "nix is not installed."
-    exit 1
-fi
 
 # Check if nix-env is installed
 if command -v nix-shell &> /dev/null
@@ -115,6 +107,8 @@ else
 fi
 
 
+=======
+>>>>>>> 460070b4bf580b65569f4d5f4557d92bcfd7194b
 # ========================
 # Customize install script
 # ========================
