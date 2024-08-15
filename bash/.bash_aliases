@@ -1,5 +1,6 @@
 #>>> cargo initialize >>>
 export PATH="$HOME/.cargo/bin:$PATH"
+. "$HOME/.cargo/env"
 
 #>>>QOL Improvements >>>
 #setup eza
@@ -81,7 +82,5 @@ else
 fi
 
 alias mamba='micromamba'
-
-
-. "$HOME/.cargo/env"
+# pixi initialization
 export PATH=/home/catbase/.pixi/bin:$PATH
