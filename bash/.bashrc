@@ -194,3 +194,5 @@ fi
 
 alias mamba='micromamba'
 
+
+. "$HOME/.cargo/env"
