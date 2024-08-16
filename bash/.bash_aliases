@@ -83,4 +83,6 @@ fi
 
 alias mamba='micromamba'
 # pixi initialization
-export PATH=/home/catbase/.pixi/bin:$PATH
+export PATH=$HOME/.pixi/bin:$PATH
+# go initialization
+export PATH=$PATH:/usr/local/go/bin
