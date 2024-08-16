@@ -3,9 +3,11 @@
 	Email = cauchybs@snu.ac.kr
 
 [credential "https://github.com"]
+  helper = 
 	helper = !$CONDA_PATH/bin/gh auth git-credential
 
 [credential "https://gist.github.com"]
+  helper = 
   helper = !$CONDA_PATH/bin/gh auth git-credential
 
 #### contrib ####

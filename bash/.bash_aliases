@@ -57,7 +57,7 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
-else
+else 
     echo "Mamba files not found. Skipping mamba initialization."
 fi
 
