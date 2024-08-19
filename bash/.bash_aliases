@@ -1,6 +1,5 @@
 #>>> cargo initialize >>>
 export PATH="$HOME/.cargo/bin:$PATH"
-. "$HOME/.cargo/env"
 
 #>>>QOL Improvements >>>
 #setup eza
