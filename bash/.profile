@@ -39,6 +39,4 @@ if [ -d "$HOME/.local/share" ] ; then
     PATH="$HOME/.local/share:$PATH"
 fi
 
-. "$HOME/.cargo/env"
-
 cd $HOME #fix navigation to windows c mount issue in wsl
