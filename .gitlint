@@ -1,1 +1,12 @@
-/qbio/catbase/.gitlint
+[general]
+# Ignore rules, reference them by id or name (comma-separated)
+ignore=title-trailing-punctuation, T3
+
+### Configuring rules ### 
+
+[title-max-length]
+line-length=80 
+
+[title-min-length]
+min-length=5
+
