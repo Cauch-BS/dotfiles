@@ -56,9 +56,6 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
-else 
-    echo "Mamba files not found. Skipping mamba initialization."
-fi
 
 # Conda initialization
 if [ -d "$CONDA_PATH" ] && [ -f "$CONDA_PATH/bin/conda" ]; then
@@ -76,10 +73,6 @@ if [ -d "$CONDA_PATH" ] && [ -f "$CONDA_PATH/bin/conda" ]; then
     fi
     unset __conda_setup
     # <<< conda initialize <<<
-else
-    echo "Conda files not found. Skipping conda initialization."
-fi
-
 alias mamba='micromamba'
 # pixi initialization
 export PATH=$HOME/.pixi/bin:$PATH
