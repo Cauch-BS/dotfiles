@@ -19,6 +19,7 @@
 -- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 -- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 -- SOFTWARE.
+
 local wezterm = require("wezterm")
 local mux = wezterm.mux
 local act = wezterm.action
@@ -258,7 +259,7 @@ mouse_bindings = {
 config.scrollback_lines = 7000
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 config.hide_tab_bar_if_only_one_tab = false
-config.color_scheme = "flexoki-dark"
+config.color_scheme = "Catppuccin Frappé (Gogh)"
 config.font = wezterm.font_with_fallback({
 	{
 		family = "CaskaydiaCove Nerd Font",
