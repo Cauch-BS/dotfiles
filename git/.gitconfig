@@ -2,14 +2,6 @@
 	Name = Chaebeom Sheen
 	Email = cauchybs@snu.ac.kr
 
-[credential "https://github.com"]
-  helper = 
-	helper = gh auth git-credential
-
-[credential "https://gist.github.com"]
-  helper = 
-  helper = gh auth git-credential
-
 #### contrib ####
 #### @brauliobo ####
 #source: https://github.com/brauliobo/gitconfig/blob/master/configs/.gitconfig
@@ -301,3 +293,9 @@
   bmps = "!git mps blogoosfero"
   nghs = "!git f noosfero; git ps ghnoosfero noosfero/master:master"
 
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

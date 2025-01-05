@@ -39,4 +39,4 @@ if [ -d "$HOME/.local/share" ] ; then
     PATH="$HOME/.local/share:$PATH"
 fi
 
-cd $HOME #fix navigation to windows c mount issue in wsl
+cd $HOME || exit #fix navigation to windows c mount issue in wsl

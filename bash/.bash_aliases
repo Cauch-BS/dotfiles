@@ -81,3 +81,6 @@ alias mamba='micromamba'
 export PATH=$HOME/.pixi/bin:$PATH
 # go initialization
 export PATH=$PATH:/usr/local/go/bin
+# fix vscode
+alias code='/mnt/c/Users/USER/AppData/Local/Programs/"Microsoft VS Code"/bin/code'
+
