@@ -1,0 +1,33 @@
+#>>> cargo initialize >>>
+export PATH="$HOME/.cargo/bin:$PATH"
+
+#>>>QOL Improvements >>>
+#setup eza
+alias ls="eza --color=always --long --git --icons=always\
+          --no-filesize --no-time --no-user --no-permissions\
+          --sort=extension"
+#some more ls aliases
+alias la="ls --tree --level=2"
+
+#setup starship
+eval "$(starship init zsh)"
+
+#setup neovim
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+alias vim="nvim"
+
+#setup fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#setup zoxide
+eval "$(zoxide init zsh)"
+alias cd='z'
+
+# >>> pixi initialize >>>
+# pixi initialization
+export PATH=$HOME/.pixi/bin:$PATH
+
+# >>> go initialize >>>
+# go initialization
+export PATH=$PATH:/usr/local/go/bin
+
