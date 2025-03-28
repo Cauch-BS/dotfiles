@@ -24,3 +24,5 @@ if [ -d "$HOME/.local/share" ] ; then
 fi
 
 cd $HOME || exit #fix navigation to windows c mount issue in wsl
+
+. "$HOME/.local/bin/env"
