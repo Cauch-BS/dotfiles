@@ -20,8 +20,7 @@ alias vim="nvim"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #setup zoxide
-eval "$(zoxide init zsh)"
-alias cd='z'
+eval "$(zoxide init --cmd cd zsh)"
 
 # >>> pixi initialize >>>
 # pixi initialization
@@ -30,4 +29,3 @@ export PATH=$HOME/.pixi/bin:$PATH
 # >>> go initialize >>>
 # go initialization
 export PATH=$PATH:/usr/local/go/bin
-
