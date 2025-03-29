@@ -15,8 +15,10 @@ eval "$(starship init zsh)"
 #setup neovim
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 alias vim="nvim"
+export MANPAGER="nvim +Man!"
 
 #setup fzf
+export FZF_DEFAULT_OPTS="--layout=reverse --exact --border=bold --border=rounded --margin=3% --color=dark"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #setup zoxide

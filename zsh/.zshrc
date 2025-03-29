@@ -1,6 +1,10 @@
 # ~/.zshrc: executed by zsh(1) for non-login shells.
 
 # If not running interactively, don't do anything
+export TERM="xterm-256color"
+export HISTCONTROL=ignoredups:erasedups
+export EDITOR="nvim"
+
 case $- in
     *i*) ;;
       *) return;;
