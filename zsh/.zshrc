@@ -24,6 +24,8 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 
+export MAMBA_NO_PS1=1
+
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba shell init' !!
 export MAMBA_EXE='/opt/homebrew/opt/micromamba/bin/mamba';
@@ -35,6 +37,8 @@ else
     alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
 fi
 unset __mamba_setup
+
+
 # <<< mamba initialize <<<
 
 . "$HOME/.local/bin/env"
