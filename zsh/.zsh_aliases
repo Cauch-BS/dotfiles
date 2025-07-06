@@ -35,3 +35,5 @@ export PATH=$PATH:/usr/local/go/bin
 # >>> initialize gpg >>>
 # gpg initialization
 export GPG_TTY=$(tty)
+
+eval "$(conda "shell.$(basename "${SHELL}")" hook)"
