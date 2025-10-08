@@ -22,16 +22,6 @@ path add "/usr/local/go/bin"
 # ---------- fzf ----------
 $env.FZF_DEFAULT_OPTS = "--layout=reverse --exact --border=bold --border=rounded --margin=3% --color=dark"
 
-## ---------- starship ----------
-## Use a Nushell-specific starship config if you have one:
-## $env.STARSHIP_CONFIG = "~/.config/starship/starship-nu.toml"
-#if (which starship | is-empty) == false {
-#  if not ($"($nu.home-path)/.cache/starship-init.nu" | path exists) {
-#    use starship init nu | save --force $"($nu.home-path)/.cache/starship-init.nu"
-#  }
-#  source $"($nu.home-path)/.cache/starship-init.nu"
-#}
-
 # ---------- GPG ----------
 # GPG expects a TTY path (use external `tty`)
 if (which gpg | is-empty) == false and (which tty | is-empty) == false {
