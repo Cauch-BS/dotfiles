@@ -143,6 +143,10 @@ format = '\[[$symbol($version)]($style)\]'
 [pijul_channel]
 format = '\[[$symbol$channel]($style)\]'
 
+[pixi]
+symbol = ''                                   # hide the 🧚
+format = '\[[@ $environment]($style)\]'       # same look as Conda
+
 [pulumi]
 format = '\[[$symbol$stack]($style)\]'
 

@@ -42,3 +42,4 @@ unset __mamba_setup
 # <<< mamba initialize <<<
 
 . "$HOME/.local/bin/env"
+export PATH="/Users/bazelcu/.pixi/bin:$PATH"
