@@ -5,4 +5,4 @@ $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
 mkdir $"($nu.cache-dir)"
 carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
 source $"($nu.cache-dir)/carapace.nu"
-source $"($nu.home-dir)/.zoxide.nu"
+source $"($nu.home-path)/.zoxide.nu"
