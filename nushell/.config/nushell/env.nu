@@ -42,4 +42,7 @@ path add "/Library/TeX/texbin"
 # ---------- emacs ----------
 path add $"($nu.home-path)/.emacs.d/bin"
 
+# ---------- conda ---------- 
+$env.CONDA_NO_PROMPT = true
+
 # ========= end of env.nu =========
