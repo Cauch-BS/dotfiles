@@ -1,0 +1,53 @@
+#>>> cargo initialize >>>
+export PATH="$HOME/.cargo/bin:$PATH"
+
+#>>>QOL Improvements >>>
+#setup eza
+alias ls="eza --color=always --long --git --icons=always\
+          --no-filesize --no-time --no-user --no-permissions\
+          --sort=extension"
+#some more ls aliases
+alias la="ls --tree --level=2"
+
+#setup starship
+eval "$(starship init zsh)"
+
+#setup neovim
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+alias vim="nvim"
+export MANPAGER="nvim +Man!"
+
+#setup fzf
+export FZF_DEFAULT_OPTS="--layout=reverse --exact --border=bold --border=rounded --margin=3% --color=dark"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#setup zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
+# >>> pixi initialize >>>
+# pixi initialization
+export PATH=$HOME/.pixi/bin:$PATH
+
+# >>> go initialize >>>
+# go initialization
+export PATH=$PATH:/usr/local/go/bin
+
+# >>> initialize gpg >>>
+# gpg initialization
+export GPG_TTY=$(tty)
+
+export CONDA_CHANGEPS1=false
+eval "$(conda "shell.$(basename "${SHELL}")" hook)"
+
+# load nvm 
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bazelcu/.local/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bazelcu/.local/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bazelcu/.local/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bazelcu/.local/google-cloud-sdk/completion.zsh.inc'; fi
+
+PATH="$HOME/.emacs.d/bin:$PATH"

@@ -143,6 +143,10 @@ format = '\[[$symbol($version)]($style)\]'
 [pijul_channel]
 format = '\[[$symbol$channel]($style)\]'
 
+[pixi]
+symbol = ''                                   # hide the 🧚
+format = '\[[@ $environment]($style)\]'       # same look as Conda
+
 [pulumi]
 format = '\[[$symbol$stack]($style)\]'
 
@@ -180,7 +184,10 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$workspace]($style)\]'
 
 [time]
-format = '\[[$time]($style)\]'
+disabled = false
+format = '🕙[\[ $time \]]($style) '
+time_format = '%R'
+utc_time_offset = '+9'
 
 [username]
 format = '\[[$user]($style)\]'
