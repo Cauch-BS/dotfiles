@@ -75,3 +75,5 @@ def --env "mamba deactivate"  [] {
 }
 
 # <<< mamba initialize <<<
+
+source ~/.config/nushell/catppuccin_mocha.nu
