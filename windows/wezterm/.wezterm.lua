@@ -29,22 +29,47 @@ local mouse_bindings = {}
 local launch_menu = {}
 local haswork, work = pcall(require, "work")
 
--- Detect platform to pick common install paths
-local is_macos = wezterm.target_triple:find("darwin") ~= nil
-local is_linux = wezterm.target_triple:find("linux") ~= nil
+--- Setup PowerShell options
+if wezterm.target_triple == "x86_64-pc-windows-msvc" then
+	--- Grab the ver info for later use.
+	local success, stdout, stderr = wezterm.run_child_process({ "cmd.exe", "ver" })
+	local major, minor, build, rev = stdout:match("Version ([0-9]+)%.([0-9]+)%.([0-9]+)%.([0-9]+)")
+	local is_windows_11 = tonumber(build) >= 22000
 
--- Pick likely paths for nu/zsh; adjust if yours differ
-local nu  = is_macos and "/opt/homebrew/bin/nu" or "/usr/bin/nu"
-local zsh = is_macos and "/bin/zsh"             or "/usr/bin/zsh"
+	--- Make it look cool.
+	if is_windows_11 then
+		wezterm.log_info("We're running Windows 11!")
+	end
 
--- 1) Default to NuShell
-config.default_prog = { nu, "-l" }  -- login shell behavior
-
--- 2) Show both shells in the New-Tab menu & the launcher (Ctrl+T in your keys)
-launch_menu = {
-  { label = "NuShell (nu)", args = { nu,  "-l" } },
-  { label = "Zsh (zsh)",    args = { zsh, "-l" } },
-}
+	--- Set Pwsh as the default on Windows
+	config.default_prog = { "powershell.exe", "-NoLogo" }
+	table.insert(launch_menu, {
+		label = "Pwsh",
+		args = { "powershell.exe", "-NoLogo" },
+	})
+	table.insert(launch_menu, {
+		label = "PowerShell",
+		args = { "powershell.exe", "-NoLogo" },
+	})
+	table.insert(launch_menu, {
+		label = "Pwsh No Profile",
+		args = { "powershell.exe", "-NoLogo", "-NoProfile" },
+	})
+	table.insert(launch_menu, {
+		label = "PowerShell No Profile",
+		args = { "powershell.exe", "-NoLogo", "-NoProfile" },
+	})
+else
+	--- Non-Windows Machine
+	table.insert(launch_menu, {
+		label = "Pwsh",
+		args = { "/usr/local/bin/pwsh", "-NoLogo" },
+	})
+	table.insert(launch_menu, {
+		label = "Pwsh No Profile",
+		args = { "/usr/local/bin/pwsh", "-NoLogo", "-NoProfile" },
+	})
+end
 
 --- Disable defaul keys and set some minimum ones for now.
 --- This helps with conflicting keys in pwsh
@@ -234,20 +259,19 @@ mouse_bindings = {
 config.scrollback_lines = 7000
 config.hyperlink_rules = wezterm.default_hyperlink_rules()
 config.hide_tab_bar_if_only_one_tab = false
-config.color_scheme = "Catppuccin Mocha"
-
+config.color_scheme = "Catppuccin Frappé (Gogh)"
 config.font = wezterm.font_with_fallback({
 	{
-		family = "JetBrains Mono",
+		family = "CaskaydiaCove Nerd Font",
 	},
 	{
-		family = "FiraCode Nerd",
+		family = "FiraCode Nerd Font",
 	},
 	{
-		family = "Hack Nerd",
+		family = "Hack Nerd Font",
 	},
 })
-config.font_size = 15.0
+config.font_size = 11.0
 config.launch_menu = launch_menu
 config.default_cursor_style = "BlinkingBar"
 config.disable_default_key_bindings = true
