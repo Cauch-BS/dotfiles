@@ -5,15 +5,15 @@ path add "/opt/homebrew/bin"
 path add "/opt/homebrew/sbin"
 
 # ---------- Cargo ----------
-path add $"($nu.home-path)/.cargo/bin"
+path add $"($nu.home-dir)/.cargo/bin"
 
 # ---------- Neovim (bob) ----------
-path add $"($nu.home-path)/.local/share/bob/nvim-bin"
+path add $"($nu.home-dir)/.local/share/bob/nvim-bin"
 alias vim = nvim
 $env.MANPAGER = "nvim +Man!"
 
 # ---------- pixi ----------
-path add $"($nu.home-path)/.pixi/bin"
+path add $"($nu.home-dir)/.pixi/bin"
 
 # ---------- Go ----------
 path add "/usr/local/go/bin"
@@ -33,8 +33,8 @@ if (which gpg | is-empty) == false and (which tty | is-empty) == false {
 }
 
 # ---------- local ----------
-path add $"($nu.home-path)/.local/bin"
-path add $"($nu.home-path)/.local/google-cloud-sdk/bin"
+path add $"($nu.home-dir)/.local/bin"
+path add $"($nu.home-dir)/.local/google-cloud-sdk/bin"
 path add "/usr/local/bin"
 
 # ---------- nix ----------
@@ -44,7 +44,7 @@ path add /nix/var/nix/profiles/default/bin
 path add "/Library/TeX/texbin"
 
 # ---------- emacs ----------
-path add $"($nu.home-path)/.emacs.d/bin"
+path add $"($nu.home-dir)/.emacs.d/bin"
 
 # ---------- conda ---------- 
 $env.CONDA_NO_PROMPT = true
@@ -64,7 +64,7 @@ carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
 
 # load carapace and zoxide
 source $"($nu.cache-dir)/carapace.nu"
-source $"($nu.home-path)/.zoxide.nu"
+source $"($nu.home-dir)/.zoxide.nu"
 
 # use script
 use ~/.config/nushell/scripts/conda.nu
