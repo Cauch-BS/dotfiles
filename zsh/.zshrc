@@ -43,3 +43,4 @@ unset __mamba_setup
 
 . "$HOME/.local/bin/env"
 export PATH="/Users/bazelcu/.pixi/bin:$PATH"
+export PATH="/opt/homebrew/opt/bc/bin:$PATH"
